@@ -1,7 +1,7 @@
 apply plugin: 'com.android.library'
 
-def DIR = "src/main/res_FF"
 android {
+    publishNonDefault true
     compileSdkVersion 25
     buildToolsVersion "26.0.0"
 
@@ -13,31 +13,34 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
     }
-    sourceSets {
-        main {
-            java {
-                srcDir 'src/main/java'
-            }
-            res {
-                if(rootProject.findProject("app")!=null)
-                    DIR = "src/main/res_KQ"
-                print("打印=== "+DIR)
-                srcDir DIR
-            }
-            assets {
-                srcDir 'assets'
-            }
-            jniLibs {
-                srcDir 'libs'
-            }
-        }
-    }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+
+//        feifan{
+//            debuggable false
+//            minifyEnabled false
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//        }
+//
+//        kuaiqian{
+//            debuggable false
+//            minifyEnabled false
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//        }
     }
+
+    productFlavors{
+        feifan{
+
+        }
+        kuaiqian{
+
+        }
+    }
+
 }
 
 
@@ -48,10 +51,4 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:25.3.1'
     testCompile 'junit:junit:4.12'
-}
-
-project.beforeEvaluate{
-    task copyRes{
-       print("打印=== beforeEvaluate")
-    }
 }

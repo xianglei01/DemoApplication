@@ -1,3 +1,4 @@
 <resources>
-    <string name="txt">res  !!</string>
+    <string name="app_name">DemoLibrary Main</string>
+    <string name="txt">Main</string>
 </resources>

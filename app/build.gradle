@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
+    publishNonDefault true
     compileSdkVersion 25
     buildToolsVersion "26.0.0"
     defaultConfig {
@@ -18,6 +19,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
 }
 
 dependencies {
@@ -26,7 +28,6 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile 'com.android.support:appcompat-v7:25.3.1'
-    compile project(":demolibrary")
+    compile project(path:':demolibrary', configuration: 'feifanRelease')
     testCompile 'junit:junit:4.12'
 }
-File configFile=file('src/res/values/ids')
