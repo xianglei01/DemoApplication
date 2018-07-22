@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TextInputView">
+        <attr name="edit_hint" format="reference"/>
+        <attr name="edit_hintSize" format="dimension"/>
+        <attr name="edit_hintColor" format="reference"/>
+        <attr name="edit_size" format="dimension"/>
+        <attr name="edit_color" format="reference"/>
+        <attr name="canDel" format="boolean"/>
+        <attr name="inputType" format="reference"/>
+        <attr name="maxlength" format="integer"/>
+    </declare-styleable>
+</resources>

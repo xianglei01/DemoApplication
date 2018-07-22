@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="inputType_psw" type="id"/>
+    <item name="inputType_text" type="id"/>
+    <item name="inputType_number" type="id"/>
+    <item name="inputType_phone" type="id"/>
+</resources>
