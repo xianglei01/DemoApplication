@@ -22,7 +22,7 @@ import android.widget.RelativeLayout;
  * @author xianglei
  * @create 下午5:26
  */
-public class TextInputView extends RelativeLayout {
+public class TextInputView extends RelativeLayout  {
 
     private boolean canDel;
     private int maxLength;
